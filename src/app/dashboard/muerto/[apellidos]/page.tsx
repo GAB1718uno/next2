@@ -63,7 +63,7 @@ export default async function MuertoPage({ params }: Props) {
     <div className=" mb-3">
       <p className=" text-4xl"> ESto que EEESSSSS</p>
       {fallecidoN?.map((fallecido) => (
-        <FallecidoItem fallecidos={fallecido} />
+        <FallecidoItem key={fallecido.id} fallecidos={fallecido} />
       ))}
     </div>
   );

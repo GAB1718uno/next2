@@ -1,6 +1,7 @@
 "use client"
 import React, { useRef, useState } from 'react';
 import Tesseract from 'tesseract.js';
+import Image from "next/image";
 
 declare const cv: any;
 
@@ -101,7 +102,7 @@ const CapturarLápida: React.FC = () => {
         </div>
       </form>
 
-      {fotoDifunto && <img src={fotoDifunto} alt="Foto del difunto" />}
+      {fotoDifunto && <Image src={fotoDifunto} alt="Foto del difunto" />}
     </div>
   );
 };
