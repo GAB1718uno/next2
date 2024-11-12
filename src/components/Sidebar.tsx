@@ -7,19 +7,19 @@ const menuItems = [
     path: "/dashboard/main",
     icon: <IoAppsSharp size={50} />,
     title: "Principal",
-    subTitle: "Visión Global de los servicios prestados",
+    subTitle: "Visión Global de los servicios",
   },
   {
     path: "/dashboard/counter",
     icon: <IoAddCircle size={50} />,
-    title: "Contador",
-    subTitle: "Contador de informes",
+    title: "Favoritos",
+    subTitle: "Selección personal",
   },
   {
     path: "/dashboard/reducciones",
     icon: <IoAt size={50} />,
-    title: "Reducciones",
-    subTitle: "Trabajos de Reducciones",
+    title: "Servicios",
+    subTitle: "Reducciones, traslados, etc",
   },
   {
     path: "/dashboard/fallecidos",
@@ -30,8 +30,8 @@ const menuItems = [
   {
     path: "/dashboard/muerto/",
     icon: <IoFootball size={50} />,
-    title: "Por Apellidos",
-    subTitle: "Relación de fallecidos con un mismo apellido",
+    title: "Busqueda",
+    subTitle: "Relación de fallecidos por apellido",
   },
 ];
 
@@ -39,12 +39,12 @@ export const Sidebar = () => {
   return (
     <div
       id="menu"
-      style={{ width: "500px" }}
+      style={{ width: "300px" }}
       className=" p-2 pr-2 bg-gray-900 min-h-screen z-10 text-slate-300 w-64 left-0 h-screen-full overflow-y-scroll"
     >
       <div id="logo" className="my-4 px-6">
         <h1 className="text-lg md:text-2xl font-bold text-white">
-          Cementerio<span className="text-blue-500 ">.com.es</span>
+          Cementerio<span className="text-blue-500 "><br></br>.com.es</span>
         </h1>
         <p className="text-slate-500 text-sm">
           Administra tus acciones y actividades

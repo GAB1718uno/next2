@@ -14,7 +14,7 @@ export const FallecidoCard = ({ fallecidos }: Props) => {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className=" relative rounded-[20px] max-w-[200px] bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-4 3xl:p-![18px] bg-slate-200 undefined">
+      <div className=" relative rounded-[20px] max-w-[200px] bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-4 3xl:p-![18px] bg-slate-300 undefined">
         <div className="h-full w-full">
           <div className="relative w-full">
             <Image

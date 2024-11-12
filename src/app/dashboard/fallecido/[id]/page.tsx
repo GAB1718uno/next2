@@ -107,8 +107,15 @@ export default async function FallecidoPage({ params }: Props) {
   }
   
   console.log(url);
-  const fallecidosRelacionados = await obtenerFallecidosRelacionados(id, sepult, sepulturaId)
+
+  const fallecidosRelacionadosCompleto = await obtenerFallecidosRelacionados(id, sepult, sepulturaId)
+  const fallecidosRelacionados = fallecidosRelacionadosCompleto.filter(data => data.id != fallecidoInd.id)
   console.log(fallecidosRelacionados)
+
+
+
+  /* const fallecidosRelacionados = await obtenerFallecidosRelacionados(id, sepult, sepulturaId)
+  console.log(fallecidosRelacionados) */
   
   return (
     <div>
@@ -149,7 +156,13 @@ export default async function FallecidoPage({ params }: Props) {
         height={100}
       />
       <span className=" text-2xl text-blue-600 capitalize"> {sepult} </span>
+      <br />
+      <div className=" bg-transparent p-4 m-3 justify-center">
+
+
+      <span className=" bg-cyan-900 text-2xl text-zinc-100 text-center"> Relacionados con { name } </span>
       <span> <FallecidoRelacionado relacionados={fallecidosRelacionados}/> </span>
+      </div>
     </div>
   );
 }

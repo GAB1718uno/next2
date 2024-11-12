@@ -5,10 +5,10 @@ import {
 } from "@/fallecidos";
 import { notFound } from "next/navigation";
 
-export const obtenerFallecidos = async (
+async function obtenerFallecidos (
     pageSize = 10,
     page = 1
-  ): Promise<SimpleFallecido[]> => {
+  ): Promise<SimpleFallecido[]> {
     try {
       
       const data: FallecidosResponse = await fetch(
